@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พอร์ตโฟลิโอ - นางสาวกอแก้ว ภูละคร</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+        }
+        .page-content {
+            display: none;
+        }
+        .page-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="bg-indigo-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center font-bold text-lg border-2 border-indigo-300">
+                    ก
+                </div>
+                <div>
+                    <h1 class="font-semibold text-lg leading-tight">นางสาวกอแก้ว ภูละคร</h1>
+                    <p class="text-xs text-indigo-250 opacity-80">Portfolio Website</p>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="flex flex-wrap justify-center gap-1 sm:gap-2 text-xs sm:text-sm">
+                <button onclick="switchPage('index')" id="nav-index" class="nav-btn px-3 py-1.5 rounded-lg transition bg-indigo-700 text-white font-medium">1. หน้าแรก</button>
+                <button onclick="switchPage('about')" id="nav-about" class="nav-btn px-3 py-1.5 rounded-lg transition hover:bg-indigo-800 text-indigo-100">2. ประวัติส่วนตัว</button>
+                <button onclick="switchPage('skills')" id="nav-skills" class="nav-btn px-3 py-1.5 rounded-lg transition hover:bg-indigo-800 text-indigo-100">3. ทักษะ</button>
+                <button onclick="switchPage('portfolio')" id="nav-portfolio" class="nav-btn px-3 py-1.5 rounded-lg transition hover:bg-indigo-800 text-indigo-100">4. ผลงาน</button>
+                <button onclick="switchPage('certificates')" id="nav-certificates" class="nav-btn px-3 py-1.5 rounded-lg transition hover:bg-indigo-800 text-indigo-100">5. เกียรติบัตร</button>
+                <button onclick="switchPage('goals')" id="nav-goals" class="nav-btn px-3 py-1.5 rounded-lg transition hover:bg-indigo-800 text-indigo-100">6. เป้าหมาย</button>
+                <button onclick="switchPage('contact')" id="nav-contact" class="nav-btn px-3 py-1.5 rounded-lg transition hover:bg-indigo-800 text-indigo-100">7. ติดต่อ</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow w-full">
+
+        <!-- PAGE 1: index.html -->
+        <section id="page-index" class="page-content active">
+            <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-slate-200 text-center flex flex-col items-center">
+                <div class="relative mb-6">
+                    <img src="รูป.jpg" 
+                         alt="รูปโปรไฟล์ นางสาวกอแก้ว ภูละคร" 
+                         class="w-44 h-44 rounded-full object-cover border-4 border-indigo-600 shadow-md">
+                    <span class="absolute bottom-2 right-2 bg-emerald-500 border-2 border-white w-5 h-5 rounded-full" title="พร้อมสำหรับการเรียนรู้"></span>
+                </div>
+                
+                <span class="px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full mb-3">ยินดีต้อนรับสู่พอร์ตโฟลิโอ</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">สวัสดีค่ะ ดิฉัน นางสาวกอแก้ว ภูละคร</h2>
+                <p class="text-slate-600 max-w-2xl text-base sm:text-lg leading-relaxed mb-8">
+                    "มุ่งมั่นพัฒนาทักษะทางเทคโนโลยี สร้างสรรค์นวัตกรรมด้วยความตั้งใจ และพร้อมเปิดรับโอกาสใหม่ๆ เพื่อการเรียนรู้และเติบโตอย่างไม่หยุดยั้ง"
+                </p>
+
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button onclick="switchPage('portfolio')" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium shadow-sm transition">
+                        ชมผลงานของฉัน
+                    </button>
+                    <button onclick="switchPage('contact')" class="px-6 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-medium transition">
+                        ติดต่อสอบถาม
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 2: about.html -->
+        <section id="page-about" class="page-content">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-3 border-slate-100 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-indigo-600 rounded-full inline-block"></span>
+                    2. ประวัติส่วนตัว (about.html)
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <span class="text-xs text-slate-400 block mb-1">ชื่อ-นามสกุล</span>
+                        <p class="font-semibold text-slate-700">นางสาวกอแก้ว ภูละคร</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <span class="text-xs text-slate-400 block mb-1">โรงเรียนธาตุนาราณ์วิทยา</span>
+                        <p class="font-semibold text-slate-700">นักเรียนระดับชั้นมัธยมศึกษาปีที่5/7</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                        <span class="text-xs text-slate-400 block mb-1">ความสนใจพิเศษ</span>
+                        <p class="font-semibold text-slate-700">หุ่นยนต์, โค้ดดิ้ง, วิทยาศาสตร์</p>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-bold text-slate-800 mb-4">ประวัติการศึกษา</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[500px]">
+                        <thead>
+                            <tr class="bg-indigo-50 text-indigo-900 text-sm">
+                                <th class="p-3.5 rounded-l-lg font-semibold">ระดับชั้น</th>
+                                <th class="p-3.5 font-semibold">ชื่อโรงเรียน / สถาบัน</th>
+                                <th class="p-3.5 rounded-r-lg font-semibold">ปีการศึกษา</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-sm">
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-medium text-slate-700">ประถมศึกษา</td>
+                                <td class="p-3.5 text-slate-600">โรงเรียนเมืองสกลนครประจำจังหวัดสกลนคร</td>
+                                <td class="p-3.5 text-slate-500">2558 - 2563</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-medium text-slate-700">มัธยมศึกษาตอนต้น</td>
+                                <td class="p-3.5 text-slate-600">โรงเรียนธาตุนาราณ์วิทยา</td>
+                                <td class="p-3.5 text-slate-500">2564 - 2566</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-3.5 font-medium text-slate-700">มัธยมศึกษาตอนปลาย</td>
+                                <td class="p-3.5 text-slate-600">โรงเรียนธาตุนาราณ์วิทยา</td>
+                                <td class="p-3.5 text-slate-500">2567 - ปัจจุบัน</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: skills.html -->
+        <section id="page-skills" class="page-content">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-3 border-slate-100 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-indigo-600 rounded-full inline-block"></span>
+                    3. ทักษะและความสามารถ (skills.html)
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Hard Skills -->
+                    <div class="bg-indigo-50/50 p-6 rounded-2xl border border-indigo-100">
+                        <h3 class="text-lg font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                            💻 ทักษะทางเทคโนโลยี (Technical Skills)
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <div>
+                                    <span class="font-semibold block">การเขียนโปรแกรมหุ่นยนต์ LEGO Spike Prime</span>
+                                    <span class="text-slate-500 text-xs">เขียนโค้ดสั่งการมอเตอร์ เซนเซอร์ตรวจจับสี และอัลตราโซนิก</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <div>
+                                    <span class="font-semibold block">การสร้างเว็บไซต์พื้นฐาน (HTML5 & CSS3)</span>
+                                    <span class="text-slate-500 text-xs">จัดโครงสร้างเว็บ ฟอร์ม และการปรับแต่งสไตล์ให้สวยงาม</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-indigo-600 font-bold">•</span>
+                                <div>
+                                    <span class="font-semibold block">กระบวนการทางวิทยาศาสตร์และโครงงาน</span>
+                                    <span class="text-slate-500 text-xs">การตั้งสมมติฐาน การทดลอง และการบันทึกวิเคราะห์ข้อมูล</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
+                        <h3 class="text-lg font-bold text-emerald-900 mb-4 flex items-center gap-2">
+                            🤝 ทักษะส่วนบุคคลและสังคม (Soft Skills)
+                        </h3>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <div>
+                                    <span class="font-semibold block">การทำงานร่วมกันเป็นทีม (Teamwork)</span>
+                                    <span class="text-slate-500 text-xs">รับฟังความเห็นของเพื่อน ร่วมมือแบ่งหน้าที่ในกลุ่มโครงงาน</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <div>
+                                    <span class="font-semibold block">การแก้ปัญหาเฉพาะหน้า (Problem Solving)</span>
+                                    <span class="text-slate-500 text-xs">วิเคราะห์และแก้ไขข้อผิดพลาดของโค้ดและกลไกหุ่นยนต์</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-emerald-600 font-bold">•</span>
+                                <div>
+                                    <span class="font-semibold block">การนำเสนอผลงาน (Presentation Skills)</span>
+                                    <span class="text-slate-500 text-xs">สื่อสารเนื้อหาโครงงานให้ผู้อื่นเข้าใจง่ายและน่าสนใจ</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: portfolio.html -->
+        <section id="page-portfolio" class="page-content">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-3 border-slate-100 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-indigo-600 rounded-full inline-block"></span>
+                    4. ผลงานและโครงงาน (portfolio.html)
+                </h2>
+
+                <div class="space-y-6">
+                    <!-- Project 1 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-5 rounded-2xl border border-slate-200 hover:border-indigo-300 transition bg-slate-50/50">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=400" 
+                             alt="หุ่นยนต์ LEGO Spike Prime" 
+                             class="w-full md:w-56 h-40 object-cover rounded-xl shadow-sm">
+                        <div class="flex-grow">
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-indigo-100 text-indigo-700 rounded-md">โครงงานหุ่นยนต์</span>
+                            <h3 class="text-lg font-bold text-slate-800 mt-2">1. หุ่นยนต์คัดแยกสารเคมีอัจฉริยะ LEGO Spike Prime</h3>
+                            <p class="text-sm text-slate-600 mt-1">โครงงานพัฒนาหุ่นยนต์อัตโนมัติเพื่อใช้แยกวัตถุตามสีและขนาดจำลองในห้องปฏิบัติการเพื่อลดความเสี่ยงของผู้ปฏิบัติงาน</p>
+                            <div class="mt-3 p-3 bg-white rounded-lg border border-slate-200">
+                                <span class="text-xs font-bold text-indigo-900 block">หน้าที่ของ นางสาวกอแก้ว ภูละคร:</span>
+                                <p class="text-xs text-slate-600 mt-0.5">รับผิดชอบการเขียนโปรแกรมควบคุม Color Sensor และเขียนอัลกอริทึมการตัดสินใจของการคัดแยก พร้อมทดสอบระบบการเคลื่อนที่</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-5 rounded-2xl border border-slate-200 hover:border-indigo-300 transition bg-slate-50/50">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=400" 
+                             alt="โครงงานสิ่งประดิษฐ์วิทยาศาสตร์" 
+                             class="w-full md:w-56 h-40 object-cover rounded-xl shadow-sm">
+                        <div class="flex-grow">
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-emerald-100 text-emerald-700 rounded-md">สิ่งประดิษฐ์วิทยาศาสตร์</span>
+                            <h3 class="text-lg font-bold text-slate-800 mt-2">2. เครื่องกรองน้ำพกพาดักจับไมโครพลาสติก</h3>
+                            <p class="text-sm text-slate-600 mt-1">โครงงานสิ่งประดิษฐ์ต้นแบบใช้แผ่นกรองเส้นใยธรรมชาติร่วมกับระบบกรองหลายชั้นเพื่อช่วยกรองน้ำสะอาดในพื้นที่ห่างไกล</p>
+                            <div class="mt-3 p-3 bg-white rounded-lg border border-slate-200">
+                                <span class="text-xs font-bold text-indigo-900 block">หน้าที่ของ นางสาวกอแก้ว ภูละคร:</span>
+                                <p class="text-xs text-slate-600 mt-0.5">รับผิดชอบการออกแบบแบบจำลอง 3D ต้นแบบ รวบรวมข้อมูลงานวิจัยอ้างอิง และทำการบันทึกวิเคราะห์ผลการทดลองในเล่มรายงาน</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="flex flex-col md:flex-row gap-6 p-5 rounded-2xl border border-slate-200 hover:border-indigo-300 transition bg-slate-50/50">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&q=80&w=400" 
+                             alt="ผลงานศิลปะเพื่อการอนุรักษ์" 
+                             class="w-full md:w-56 h-40 object-cover rounded-xl shadow-sm">
+                        <div class="flex-grow">
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-amber-100 text-amber-700 rounded-md">ผลงานศิลปะดิจิทัล</span>
+                            <h3 class="text-lg font-bold text-slate-800 mt-2">3. ภาพวาดดิจิทัลรณรงค์ "Harmonious Nature"</h3>
+                            <p class="text-sm text-slate-600 mt-1">ผลงานวาดภาพดิจิทัลสื่อความหมายถึงการอยู่ร่วมกันอย่างสมดุลระหว่างเทคโนโลยีสมัยใหม่และธรรมชาติสิ่งแวดล้อม</p>
+                            <div class="mt-3 p-3 bg-white rounded-lg border border-slate-200">
+                                <span class="text-xs font-bold text-indigo-900 block">หน้าที่ของ นางสาวกอแก้ว ภูละคร:</span>
+                                <p class="text-xs text-slate-600 mt-0.5">คิดค้นแนวคิดเรื่องสื่อความหมาย สเกตช์ภาพร่าง ลงสีดิจิทัล และจัดพิมพ์โปสเตอร์ประชาสัมพันธ์ด้วยตนเองทั้งหมด</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 5: certificates.html -->
+        <section id="page-certificates" class="page-content">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-3 border-slate-100 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-indigo-600 rounded-full inline-block"></span>
+                    5. เกียรติบัตรและรางวัล (certificates.html)
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Certificate 1 -->
+                    <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50/50 text-center flex flex-col items-center">
+                        <img src="S__1351686.jpg" 
+                             alt="เกียรติบัตรการรู้ทันภัยไซเบอร์ บนโลกออนไลน์ " 
+                             class="w-full h-48 object-cover rounded-xl border border-slate-200 mb-4 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-1">เกียรติบัตรค่ายอบรมเชิงปฏิบัติการหุ่นยนต์</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            ผ่านการฝึกอบรมการโปรแกรมหุ่นยนต์ LEGO Spike Prime และการเขียนโค้ดเบื้องต้น จัดโดยสถาบันเทคโนโลยีเยาวชน
+                        </p>
+                    </div>
+
+                    <!-- Certificate 2 -->
+                    <div class="border border-slate-200 rounded-2xl p-4 bg-slate-50/50 text-center flex flex-col items-center">
+                        <img src="เกียตติบัตร.jpg" 
+                             alt="เกียตติบัตรเปิดโลกเรียนรู้   สู่อนาคตดีกว่า" 
+                             class="w-full h-48 object-cover rounded-xl border border-slate-200 mb-4 shadow-sm">
+                        <h3 class="font-bold text-slate-800 text-base mb-1">รางวัลรองชนะเลิศอันดับ 1 การแข่งขันโครงงาน</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">
+                            ได้รับรางวัลรองชนะเลิศอันดับ 1 ประเภทสิ่งประดิษฐ์วิทยาศาสตร์และเทคโนโลยี ในงานสัปดาห์วิทยาศาสตร์ระดับโรงเรียน
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: goals.html -->
+        <section id="page-goals" class="page-content">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-3 border-slate-100 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-indigo-600 rounded-full inline-block"></span>
+                    6. เป้าหมายในอนาคต (goals.html)
+                </h2>
+
+                <div class="space-y-6">
+                    <div class="p-6 bg-indigo-50/60 rounded-2xl border border-indigo-100">
+                        <span class="text-xs font-bold text-indigo-700 uppercase tracking-wider block mb-1">🎯 เป้าหมายการศึกษาต่อ</span>
+                        <h3 class="text-xl font-bold text-indigo-950 mb-3">เข้าศึกษาต่อระดับอุดมศึกษา ในคณะวิศวกรรมศาสตร์ หรือ คณะเทคโนโลยีสารสนเทศ</h3>
+                        <p class="text-slate-700 text-sm leading-relaxed">
+                            ดิฉัน **นางสาวกอแก้ว ภูละคร** มีเป้าหมายอันมุ่งมั่นที่จะเข้าศึกษาต่อในระดับปริญญาตรี สาขาวิศวกรรมคอมพิวเตอร์ หรือวิทยาการคอมพิวเตอร์ เพื่อต่อยอดทักษะความรู้ด้านการพัฒนาซอฟต์แวร์ ปัญญาประดิษฐ์ และระบบหุ่นยนต์
+                        </p>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-1">💡 เหตุผลประกอบและวิสัยทัศน์</span>
+                        <p class="text-slate-700 text-sm leading-relaxed mb-3">
+                            เนื่องจากปัจจุบันเทคโนโลยีดิจิทัลและระบบอัตโนมัติได้เข้ามามีบทบาทสำคัญอย่างยิ่งต่อทุกภาคส่วนในสังคม การสร้างนวัตกรรมใหม่ๆ สามารถช่วยแก้ไขปัญหาที่ซับซ้อน เช่น ด้านการแพทย์ การเกษตร และสิ่งแวดล้อมได้ดิฉันเชื่อมั่นว่าการศึกษาสายวิชานี้จะช่วยให้ดิฉันมีความรู้เชิงลึก สามารถออกแบบและพัฒนานวัตกรรมที่มีประโยชน์ต่อประเทศชาติได้อย่างยั่งยืน
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 7: contact.html -->
+        <section id="page-contact" class="page-content">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-3 border-slate-100 flex items-center gap-2">
+                    <span class="w-2 h-6 bg-indigo-600 rounded-full inline-block"></span>
+                    7. ติดต่อสอบถาม (contact.html)
+                </h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Contact Info -->
+                    <div class="space-y-4">
+                        <h3 class="text-base font-bold text-slate-800">ช่องทางการติดต่อ0652904531</h3>
+                        
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-xs text-slate-400 block mb-1">📧 อีเมล</span>
+                            <a href="mailto:korkaew.phu@example.com" class="text-sm font-semibold text-indigo-600 hover:underline">korkaew.phu@example.com</a>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-xs text-slate-400 block mb-1">🌐 โซเชียลมีเดีย</span>
+                            <div class="flex flex-col gap-1 text-sm mt-1">
+                                <a href="#" class="text-indigo-600 hover:underline font-medium">Facebook: Korkaew Phulakhon</a>
+                                <a href="#" class="text-indigo-600 hover:underline font-medium">Instagram: @pp_555_x</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Structure -->
+                    <div class="lg:col-span-2 bg-slate-50/50 p-6 rounded-2xl border border-slate-200">
+                        <h3 class="text-base font-bold text-slate-800 mb-4">ฝากข้อความติดต่อ</h3>
+                        <form onsubmit="event.preventDefault(); alert('ส่งข้อความเรียบร้อยแล้ว (จำลองระบบ)');" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-semibold text-slate-700 mb-1">ชื่อ-นามสกุลผู้ส่งข้อความ *</label>
+                                <input type="text" id="name" name="name" required placeholder="กรอกชื่อ-นามสกุลของคุณ" 
+                                       class="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-xs font-semibold text-slate-700 mb-1">อีเมลผู้ติดต่อ *</label>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com" 
+                                       class="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-slate-700 mb-1">ข้อความ *</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="พิมพ์ข้อความที่คุณต้องการฝากไว้..." 
+                                          class="w-full px-3.5 py-2 text-sm rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-xl transition shadow-sm">
+                                ยืนยันส่งข้อความ
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs text-center py-6 border-t border-slate-800 mt-auto">
+        <p>© 2026 นางสาวกอแก้ว ภูละคร - พอร์ตโฟลิโอเว็บไซต์ส่วนตัว</p>
+    </footer>
+
+    <!-- JavaScript Navigation Script -->
+    <script>
+        function switchPage(pageId) {
+            // Hide all page sections
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Show selected page
+            const selectedPage = document.getElementById('page-' + pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+            }
+
+            // Update navigation button active styles
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                btn.classList.remove('bg-indigo-700', 'text-white', 'font-medium');
+                btn.classList.add('hover:bg-indigo-800', 'text-indigo-100');
+            });
+
+            const activeBtn = document.getElementById('nav-' + pageId);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-indigo-700', 'text-white', 'font-medium');
+                activeBtn.classList.remove('hover:bg-indigo-800', 'text-indigo-100');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
